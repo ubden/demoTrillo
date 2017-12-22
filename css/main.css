@@ -37,4 +37,23 @@ body {
 
 .container {
   max-width: 120rem;
-  margin: 8rem auto; }
+  margin: 8rem auto;
+  background-color: #faf9f9;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  min-height: 50rem; }
+
+.content {
+  display: flex; }
+
+.header {
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: #f4f2f2; }
+
+.main-view {
+  background-color: #fff;
+  flex: 1; }
+
+.sidebar {
+  background-color: #333;
+  flex: 0 0 18%; }
