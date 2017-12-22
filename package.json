@@ -1,0 +1,29 @@
+{
+  "name": "trillo",
+  "version": "1.0.0",
+  "description": "Trillo Flexbox Project",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MilanPetrovic/trillo.git"
+  },
+  "keywords": [
+    "flexbox"
+  ],
+  "author": "Milan Petrovic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MilanPetrovic/trillo/issues"
+  },
+  "homepage": "https://github.com/MilanPetrovic/trillo#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.2.3",
+    "concat": "^1.0.3",
+    "node-sass": "^4.7.2",
+    "npm-run-all": "^4.1.2",
+    "postcss-cli": "^4.1.1"
+  }
+}
