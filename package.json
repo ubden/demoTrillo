@@ -4,9 +4,7 @@
   "description": "Trillo Flexbox Project",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w",
-    "devserver": "live-server",
-    "start": "npm-run-all --parallel devserver watch:sass"
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
@@ -22,10 +20,8 @@
   },
   "homepage": "https://github.com/MilanPetrovic/trillo#readme",
   "devDependencies": {
-    "autoprefixer": "^7.2.3",
-    "concat": "^1.0.3",
-    "node-sass": "^4.7.2",
-    "npm-run-all": "^4.1.2",
-    "postcss-cli": "^4.1.1"
+    "browser-sync": "^2.21.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
   }
 }
