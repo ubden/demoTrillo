@@ -35,6 +35,26 @@ body {
   background-repeat: no-repeat;
   min-height: 100vh; }
 
+.gallery {
+  display: flex; }
+  .gallery__photo {
+    width: 100%;
+    display: block; }
+
+.legal {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 2.5rem; }
+  .legal,
+  .legal a {
+    color: #ccc; }
+  .legal a {
+    display: inline-block;
+    text-decoration: none;
+    transition: .2s all ease-out; }
+    .legal a:hover {
+      color: #fff; }
+
 .logo {
   height: 3.25rem;
   margin-left: 2rem; }
@@ -76,6 +96,44 @@ body {
     height: 2rem;
     width: 2rem;
     fill: #999; }
+
+.side-nav {
+  font-size: 1.4rem;
+  list-style: none;
+  margin-top: 3.5rem; }
+  .side-nav__item {
+    position: relative; }
+    .side-nav__item:not(:last-child) {
+      margin-bottom: .5rem; }
+  .side-nav__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #eb2f64;
+    transform: scaleY(0);
+    transition: transform 0.2s ease-in, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
+  .side-nav__item:hover::before, .side-nav__item--active::before {
+    transform: scaleY(1);
+    width: 100%; }
+  .side-nav__item:active::before {
+    background-color: #ff3366; }
+  .side-nav__link:link, .side-nav__link:visited {
+    color: #faf9f9;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    position: relative;
+    z-index: 20; }
+  .side-nav__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: 2rem;
+    fill: #faf9f9; }
 
 .user-nav {
   align-self: stretch;
@@ -138,4 +196,7 @@ body {
 
 .sidebar {
   background-color: #333;
-  flex: 0 0 18%; }
+  flex: 0 0 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
