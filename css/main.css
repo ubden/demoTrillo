@@ -14,6 +14,17 @@
     --color-grey-dark-3: #999;
 }
 */
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: none; }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25); }
+  100% {
+    transform: scale(1);
+    box-shadow: none; } }
+
 *,
 *:before,
 *:after {
@@ -34,6 +45,22 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh; }
+
+.btn-inline {
+  border: none;
+  color: #eb2f64;
+  font-size: inherit;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+  transition: al .2s ease-out; }
+  .btn-inline:hover {
+    color: #333; }
+  .btn-inline:focus {
+    outline: none;
+    animation: pulsate 1s infinite; }
 
 .gallery {
   display: flex; }
@@ -58,6 +85,47 @@ body {
 .logo {
   height: 3.25rem;
   margin-left: 2rem; }
+
+.overview {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f4f2f2; }
+  .overview__heading {
+    font-size: 2.25rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem; }
+  .overview__stars {
+    margin-right: auto;
+    display: flex; }
+  .overview__icon-star, .overview__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: #eb2f64; }
+  .overview__location {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center; }
+  .overview__icon-location {
+    margin-right: .5rem; }
+  .overview__rating {
+    background-color: #eb2f64;
+    color: #fff;
+    align-self: stretch;
+    margin-left: 3rem;
+    padding: 0 2.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .overview__rating-average {
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin-bottom: -3px; }
+  .overview__rating-count {
+    font-size: 1rem;
+    text-transform: uppercase; }
 
 .search {
   flex: 0 0 40%;
@@ -185,7 +253,7 @@ body {
   font-size: 1.4rem;
   height: 7rem;
   background-color: #fff;
-  border-bottom: #f4f2f2;
+  border-bottom: 1px solid #f4f2f2;
   display: flex;
   justify-content: space-between;
   align-items: center; }
