@@ -14,6 +14,11 @@
     position: relative;
     overflow: hidden;
 
+    @include respond(medium) {
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
+
     &::before {
         content: "\201C";
         position: absolute;

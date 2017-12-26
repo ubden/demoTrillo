@@ -1,0 +1,30 @@
+// Media Query Manager
+
+/* 
+    $breakpoint values:
+    130 rem - container width
+
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == container {
+        @media only screen and (max-width: 81.25em) { @content; } // 1300px
+    }
+
+    @if $breakpoint == large {
+        @media only screen and (max-width: 68.75em) { @content; } // 1100px
+    }
+
+    @if $breakpoint == medium {
+        @media only screen and (max-width: 56.25em) { @content; } // 900px
+    }
+
+    @if $breakpoint == small {
+        @media only screen and (max-width: 37.5em) { @content; } // 600px
+    }
+
+    @if $breakpoint == smallest {
+        @media only screen and (max-width: 31.25em) { @content; } // 500px
+    }
+}
+

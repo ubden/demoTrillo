@@ -3,6 +3,10 @@
     text-align: center;
     padding: 2.5rem;
 
+    @include respond(medium) {
+        display: none;
+    }
+
     &,
     & a {
         color: $color-grey-light-4;

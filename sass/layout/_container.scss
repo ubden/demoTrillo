@@ -3,4 +3,10 @@
     margin: 8rem auto;
     background-color: $color-grey-light-1;
     box-shadow: 0 2rem 6rem rgba(0,0,0,.3);
+
+    @include respond(container) {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }
 }

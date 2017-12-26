@@ -3,11 +3,24 @@
     list-style: none;
     margin-top: 3.5rem;
 
+    @include respond(medium) {
+        display: flex;
+        margin: 0;
+    }
+
     &__item {
         position: relative;
 
+        @include respond(medium) {
+            flex: 1;
+        }
+
         &:not(:last-child) {
             margin-bottom: .5rem;
+
+            @include respond(medium) {
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -46,6 +59,16 @@
         position: relative;
         z-index: 20;
 
+        @include respond(medium) {
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        @include respond(small) {
+            flex-direction: column;
+            padding: 1.5rem .5rem;
+        }
+
     }
 
     &__icon {
@@ -53,5 +76,12 @@
         height: 1.75rem;
         margin-right: 2rem;
         fill: $color-grey-light-1;
+
+        @include respond(small) {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-right: 0;
+            margin-bottom: .5rem
+        }
     }
 }
