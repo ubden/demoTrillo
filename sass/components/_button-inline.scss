@@ -7,10 +7,19 @@
     display: inline-block;
     background-color: transparent;
     cursor: pointer;
-    transition: al .2s ease-out;
+    transition: all .2s ease-out;
+
+    & span {
+        margin-left: 3px;
+        transition: margin-left .2s ease-out;
+    }
 
     &:hover {
         color: $color-grey-dark-1;
+
+        span {
+            margin-left: 8px;
+        }
     }
 
     &:focus {

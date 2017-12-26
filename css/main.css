@@ -55,9 +55,14 @@ body {
   display: inline-block;
   background-color: transparent;
   cursor: pointer;
-  transition: al .2s ease-out; }
+  transition: all .2s ease-out; }
+  .btn-inline span {
+    margin-left: 3px;
+    transition: margin-left .2s ease-out; }
   .btn-inline:hover {
     color: #333; }
+    .btn-inline:hover span {
+      margin-left: 8px; }
   .btn-inline:focus {
     outline: none;
     animation: pulsate 1s infinite; }
@@ -286,8 +291,55 @@ body {
     margin-right: 1rem; }
 
 .user-reviews {
-  background-color: rebeccapurple;
-  flex: 1; }
+  flex: 1;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.review {
+  background-color: #fff;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+  overflow: hidden; }
+  .review::before {
+    content: "\201C";
+    position: absolute;
+    top: -2.75rem;
+    left: -1rem;
+    font-size: 20rem;
+    font-family: sans-serif;
+    line-height: 1;
+    color: #f4f2f2;
+    z-index: 1; }
+  .review__text {
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 5; }
+  .review__author {
+    display: flex;
+    align-items: center; }
+    .review__author-box {
+      margin-right: auto; }
+    .review__author-name {
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: .4rem; }
+    .review__author-date {
+      font-size: 1.1rem;
+      color: #999; }
+  .review__photo {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    margin-right: 1.5rem; }
+  .review__rating {
+    color: #eb2f64;
+    font-size: 2.2rem;
+    font-weight: 300; }
 
 .container {
   max-width: 130rem;

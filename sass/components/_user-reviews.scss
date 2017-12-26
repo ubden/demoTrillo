@@ -1,0 +1,68 @@
+.user-reviews {
+    flex: 1;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review {
+    background-color: #fff;
+    box-shadow: 0 2rem 5rem rgba(0,0,0,.1);
+    padding: 3rem;
+    margin-bottom: 3.5rem;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "\201C";
+        position: absolute;
+        top: -2.75rem;
+        left: -1rem;
+        font-size: 20rem;
+        font-family: sans-serif;
+        line-height: 1;
+        color: $color-grey-light-2;
+        z-index: 1;
+    }
+
+    &__text {
+        margin-bottom: 2rem;
+        position: relative;
+        z-index: 5;
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+
+        &-box {
+            margin-right: auto;
+        }
+
+        &-name {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: .4rem;
+        }
+
+        &-date {
+            font-size: 1.1rem;
+            color: $color-grey-dark-3;
+        }
+    }
+
+    &__photo {
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
+        margin-right: 1.5rem;
+    }
+
+    &__rating {
+        color: $color-primary;
+        font-size: 2.2rem;
+        font-weight: 300;
+    }
+}
