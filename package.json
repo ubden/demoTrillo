@@ -25,12 +25,12 @@
   },
   "homepage": "https://github.com/MilanPetrovic/trillo#readme",
   "devDependencies": {
-    "browser-sync": "^2.21.0",
+    "browser-sync": "^2.29.1",
     "gulp": "^3.9.1",
     "gulp-sass": "^3.1.0",
     "autoprefixer": "^7.1.4",
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.1.1",
-    "postcss-cli": "^4.1.1"
+    "postcss-cli": "^10.1.0"
   }
 }
